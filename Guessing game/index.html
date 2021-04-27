@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <br /><br />
+
+    <div class="header">
+      <h1>Guessing game</h1>
+      <br />
+      <h2>Would you find the right number ?</h2>
+      <h3>(A little hint : It's between 1 and 100)</h3>
+    </div>
+
+    <br /><br /><br /><br /><br />
+
+    <div class="container">
+      <div class="item1">
+        <button
+          id="start"
+          onclick="computerPlay()"
+          class="btn btn-outline-info"
+        >
+          Start the game
+        </button>
+
+        <br /><br />
+
+        <div
+          id="playerTurn"
+          class="animate__animated animate__tada animateStart"
+        >
+          <b>You're turn to choose !</b>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="mb-3 item2">
+        <label class="form-label chosen-number"><b>Choose a number</b></label>
+        <input
+          type="text"
+          class="btn btn-outline-info"
+          id="guess"
+          aria-describedby="emailHelp"
+          pattern="[\d]{9}"
+        />
+      </div>
+
+      <br />
+
+      <div class="item3">
+        <button
+          type="button"
+          id="btn"
+          onclick="compare(), clearInput() "
+          class="btn btn-outline-info"
+        >
+          Send
+        </button>
+      </div>
+
+      <br />
+
+      <div class="allowed item4">
+        <h4>Number of trials allowed :<span id="nbrAllowed"></span></h4>
+      </div>
+
+      <br />
+
+      <div class="left item5">
+        <h4>Number of trials left :<span id="left"></span></h4>
+      </div>
+
+      <br />
+
+      <div class="turnResult item6">
+        <h4>Turn result :<span id="turnResult"></span></h4>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>

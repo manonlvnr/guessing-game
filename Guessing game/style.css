@@ -1,0 +1,70 @@
+body {
+  background-color: #1d353b;
+  padding: 30px;
+}
+
+h4 {
+  color: #fbcfb9;
+}
+
+button {
+  text-align: center;
+  color: #97b8de;
+}
+
+.animateStart{
+  color: #59e1fa;
+}
+
+#playerTurn {
+  display: none;
+}
+
+#turnResult{
+  color:#fbcfb9;
+}
+
+.header {
+  text-align: center;
+  color: #fbcfb9;
+}
+
+.chosen-number {
+  color: #59e1fa;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "colleft1 colright1"
+    "colleft2 colright2"
+    "colleft3 colright3";
+  justify-content: center;
+}
+
+.item1 {
+  grid-area: colleft1;
+}
+
+.item2 {
+  grid-area: colleft2;
+}
+
+.item3 {
+  grid-area: colleft3;
+}
+
+.item4 {
+  grid-area: colright1;
+}
+
+.item5 {
+  grid-area: colright2;
+}
+
+.item6 {
+  grid-area: colright3;
+}
